@@ -7,6 +7,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+      - run: npm clean-install
       - run: npx gulp html
       - name: Deploy with gh-pages
         run: |
